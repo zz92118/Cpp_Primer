@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include "Sales_item.h"
+using namespace std;
 
 void basic_class(){
     Sales_item book;
@@ -125,12 +126,27 @@ int q_1_6()
     }
 }
 
+void const_pointer()
+{
+    int i=0;
+    int *const p1 = &i; //这个指针是个常量
+    *p1 = 20;
+    cout<<i<<endl; //20
+
+    const int c=0;
+    const int *p2 = &i; // 指向常量的指针
+    cout<<*p2<<endl; //20
+    i = 10;
+    cout<<*p2<<endl;// 10
+}
+
 
 int main(){
-//    q_2_3();
-//    q_1_5_1();
-//    q_1_5_2();
-    q_1_6();
+    //    q_2_3();
+    //    q_1_5_1();
+    //    q_1_5_2();
+    // q_1_6();
+    const_pointer();
     return 0;
 }
 

@@ -101,11 +101,72 @@ void q_3_31(){
     }
 }
 
+void multi_array()
+{
+    int arr[3][4] = 
+    { 
+        { 0, 1, 2, 3 },
+        { 4, 5, 6, 7 },
+        { 8, 9, 10, 11 }
+    };
+
+    // range for
+    // for (const int(&row)[4] : arr)
+    //     for (int col : row) cout << col << " ";
+    // cout << endl;
+
+    // // for loop
+    // for (size_t i = 0; i != 3; ++i)
+    //     for (size_t j = 0; j != 4; ++j) cout << arr[i][j] << " ";
+    // cout << endl;
+
+    // using pointers.
+    for (int(*row)[4] = arr; row != arr + 3; ++row)
+		//(*row)
+        for (int *col = *row; col != *row + 4; ++col) cout << *col << " ";
+    cout << endl;
+
+    cout<<**arr<<endl; // arr和 *arr都是地址 **arr是value
+
+}
+
+//c风格字符串必须\0结尾
+void stringchar()
+{
+    string s("123");
+    char a2[] = {'c','+','+'};
+    char a3[] = "c++";
+    cout<<sizeof(a2)<<" "<<sizeof(a3)<<endl;
+    for(auto i : a2)
+    {
+        cout<<i<<endl;
+    }
+    for(auto i : a3)
+    {
+        cout<<i<<endl;
+    }
+    string a4 = a3;
+    cout<<a4<<endl;
+
+    a4 = a2 ;
+    cout<<a4<<endl;
+
+
+    // for(auto i : s2)
+    // {
+    //     cout<<i<<endl;
+    // }
+    // cout<<s.size()<<endl;
+}
+
 int main(){
 //    basic_getline();
+    // multi_array();
+    stringchar();
+}
 //    basic_string();
 //    basic_bieset();
 //    q_3_14();
 //    q_3_17();
-    q_3_23();
-}
+//     q_3_23();
+// }

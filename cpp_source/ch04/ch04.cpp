@@ -27,8 +27,16 @@ int q_4_28()
     return 0;
 }
 
+int douhao()
+{
+    int a = 0;
+    int b= 20;
+    ++a,b++;
+}
+
+
 int main(){
-    q_4_28();
+    // q_4_28();
 }
 
 
