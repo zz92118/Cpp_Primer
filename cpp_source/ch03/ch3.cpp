@@ -130,6 +130,33 @@ void multi_array()
 
 }
 
+void for_multi_array()
+{
+    int arr[3][4] = 
+    { 
+        { 0, 1, 2, 3 },
+        { 4, 5, 6, 7 },
+        { 8, 9, 10, 11 }
+    };
+    for ( auto &row : arr)
+    {
+        cout << row<<endl;
+        for(auto col : row)
+        {
+            // cout<<col<<endl;
+        }
+    }
+
+    for ( auto row : arr) //
+    {
+        cout << row<<endl;
+        // for(auto col : row)
+        // {
+        //     cout<<col<<endl;
+        // }
+    }
+}
+
 //c风格字符串必须\0结尾
 void stringchar()
 {
@@ -162,7 +189,8 @@ void stringchar()
 int main(){
 //    basic_getline();
     // multi_array();
-    stringchar();
+    // stringchar();
+    for_multi_array();
 }
 //    basic_string();
 //    basic_bieset();
