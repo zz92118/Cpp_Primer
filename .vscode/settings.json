@@ -1,6 +1,18 @@
 {
     "files.associations": {
+        "unordered_map": "cpp",
+        "__bit_reference": "cpp",
+        "__split_buffer": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
         "iostream": "cpp",
-        "ostream": "cpp"
-    }
+        "ostream": "cpp",
+        "iosfwd": "cpp"
+    },
+    "code-runner.runInTerminal": true,
+    "C_Cpp.default.cppStandard": "c++11",
+    "code-runner.executorMap": {
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt -std=c++11 && $dir$fileNameWithoutExt"
+    },
+    "window.zoomLevel": 0,
 }

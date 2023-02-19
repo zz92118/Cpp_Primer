@@ -15,6 +15,22 @@ void loading(){
     cout << "loaded!      " << endl;
 }
 
+std::istream& func(std::istream &is)
+{
+    std::string buf;
+    while (is >> buf)
+    {
+        if(buf=="quit")
+        {
+            break;
+        }
+        std::cout << buf << std::endl;
+    }
+
+    is.clear();
+    return is;
+}
+
 void file_io(){
     string in_file_name = "test_in_file";
     string out_file_name = "test_out_file";
@@ -45,5 +61,7 @@ void file_io(){
 
 int main(){
     file_io();
-    return 0;
+    // istream& is = func(std::cin);
+    // std::cout << is.rdstate() << std::endl;
+    // return 0;
 }
