@@ -27,7 +27,7 @@ int main()
     copy(vec.cbegin(), vec.cend(), back_inserter(lit2));
     print(lit2);
     
-    // uses front_inserter
+    // uses front_inserter 迭代器调用容器操作，向给定容器的指定位置插入一个元素。
     list<int> lst3;
     copy(vec.cbegin(), vec.cend(), front_inserter(lst3));
     print(lst3);
