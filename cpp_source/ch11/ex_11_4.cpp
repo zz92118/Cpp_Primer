@@ -14,7 +14,7 @@ void word_count_pro(std::map<std::string, int>& m)
 		
 		word.erase(std::remove_if(word.begin(), word.end(), ispunct),
 			word.end());
-		++m[word];
+		++m[word];// 存放
 	}
 	for (const auto& e : m) std::cout << e.first << " : " << e.second << "\n";
 }
