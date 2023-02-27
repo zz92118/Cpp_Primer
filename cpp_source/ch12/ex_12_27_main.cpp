@@ -8,7 +8,7 @@ using namespace std;
 void runQueries(ifstream& infile)
 {
 	// infile是一个ifstream，指向我们要处理的文件
-    TextQuery tq(infile);
+    TextQuery tq(infile);// 保存文件 查询map
     // 与用户交互：提示用户输入要查询的单词，完成查询并打印结果
 	while (true)
 	{

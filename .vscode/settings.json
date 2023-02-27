@@ -10,7 +10,8 @@
         "iosfwd": "cpp",
         "random": "cpp",
         "iterator": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "memory": "cpp"
     },
     "code-runner.runInTerminal": true,
     "C_Cpp.default.cppStandard": "c++11",

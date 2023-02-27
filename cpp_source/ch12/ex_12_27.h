@@ -16,15 +16,15 @@ public:
     // 行号的类型
 	using line_no = std::vector<std::string>::size_type;
 	TextQuery(std::ifstream&);
-	QueryResult query(const std::string& s) const;
+	QueryResult query(const std::string& s) const;// 看最上面的定义 ，定义了返回类型
 
-private:
+private:// 共享的数据
 	std::shared_ptr<std::vector<std::string> > file; // 输入文件
     // 每个单词到它所在的行号的集合的映射
 	std::map<std::string, std::shared_ptr<std::set<line_no> > > wm;
 };
 
-class QueryResult
+class QueryResult// 需要的数据就是TextQuery类的数据
 {
 public:
 	friend std::ostream& print(std::ostream&, const QueryResult&);

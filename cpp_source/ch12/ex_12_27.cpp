@@ -17,7 +17,7 @@ TextQuery::TextQuery(ifstream& ifs) : file(new vector<string>)
 		string word;
 		while (line >> word)
 		{
-			auto &lines = wm[word];
+			auto &lines = wm[word];// map 映射 是个left value
 			if (!lines)
 				lines.reset(new set<line_no>);  // 如果第一次遇到这个单词，则新建一个set
 			lines->insert(n);
@@ -27,7 +27,8 @@ TextQuery::TextQuery(ifstream& ifs) : file(new vector<string>)
 
 QueryResult TextQuery::query(const string& s) const
 {
-	static shared_ptr<set<line_no> > nodata(new set<line_no>);
+
+	static shared_ptr<set<line_no> > nodata(new set<line_no>);//返回一个static对象，static确保在类内，防止shared_ptr return之后直接销毁了
     // 使用find而不是下标运算符来查找单词，避免将单词添加到wm中
 	auto loc = wm.find(s);
 	if (loc == wm.end())
